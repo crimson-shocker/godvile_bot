@@ -7,3 +7,7 @@ vnc pass vncpassword
 
 3 start bot
     ./startbot.sh 
+
+4 add cron
+
+* */1 * * *	root	/opt/godvile_bot/startbot.sh >> /var/log/bot.log
