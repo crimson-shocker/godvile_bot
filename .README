@@ -1,13 +1,17 @@
 vnc pass vncpassword
 
-1 build images 
+1 install
+cd /opt/
+git clone https://github.com/crimson-shocker/godvile_bot
+
+2 build images 
     docker build -f Dockerfile -t bot .
 
-2 config  passwd
+3 config  passwd
 
-3 start bot
+4 start bot
     ./startbot.sh 
 
-4 add cron
+5 add cron
 
 * */1 * * *	root	/opt/godvile_bot/startbot.sh >> /var/log/bot.log
