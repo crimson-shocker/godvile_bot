@@ -1,0 +1,9 @@
+vnc pass vncpassword
+
+1 build images 
+    docker build -f Dockerfile -t bot .
+
+2 config  passwd
+
+3 start bot
+    ./startbot.sh 
