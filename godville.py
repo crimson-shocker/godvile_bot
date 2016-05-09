@@ -4,7 +4,7 @@ import time
 from selenium import webdriver
 #<get identity>
 print('===============Start_bot===============')
-f = open('passwd')
+f = open('/opt/passwd')
 a = f.read()
 r = a.replace("\n", "")
 username = r.split(':')[0]
