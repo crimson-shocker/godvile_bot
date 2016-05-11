@@ -18,6 +18,12 @@ case $1 in
     echo '-h'
   ;;
   
+    "-remove")
+    docker images |grep bot |awk '{print $3}' |xargs docker rmi
+    docker images |grep ubuntu-xfce-vnc |awk '{print $3}' |xargs docker rmi
+  ;;
+
+  
   *)
     echo +++++++++++++++++++++++++++++++++++++++++++++++++++++ >>/var/log/bot.log
     echo `date +%F_%H:%M:%S` Start Bot  >>/var/log/bot.log
