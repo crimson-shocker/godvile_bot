@@ -4,7 +4,7 @@ vnc pass vncpassword
 cd /opt/
 git clone -b docker https://github.com/crimson-shocker/godvile_bot
 
-2 first install
+2 Install docker images
 ./startbot.sh -install
 
 3 config  passwd
