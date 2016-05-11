@@ -15,7 +15,7 @@ case $1 in
     echo 'Parm:'
     echo '-install'
     echo '-update:'
-    echo 'Parm:'
+    echo '-h'
   ;;
   
   *)
