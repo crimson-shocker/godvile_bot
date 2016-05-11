@@ -4,8 +4,8 @@ vnc pass vncpassword
 cd /opt/
 git clone -b docker https://github.com/crimson-shocker/godvile_bot
 
-2 build images 
-    docker build -f Dockerfile -t bot .
+2 ferst install
+./startbot.sh -install
 
 3 config  passwd
 
@@ -13,5 +13,11 @@ git clone -b docker https://github.com/crimson-shocker/godvile_bot
     ./startbot.sh 
 
 5 add cron
+0 */1 * * *	root	/opt/godvile_bot/startbot.sh >> /var/log/bot.log
 
-* */1 * * *	root	/opt/godvile_bot/startbot.sh >> /var/log/bot.log
+Update 
+./startbot.sh -update
+
+Remove (Delete all docker images needed for the bot)
+ ./startbot.sh -update
+
