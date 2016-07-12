@@ -14,7 +14,7 @@ global find_enemy
 
 #---passwd_file---
 print('===============Start_bot===============')
-f = open('passwd')
+f = open('/opt/passwd')
 a = f.read()
 r = a.replace("\n", "")
 username = r.split(':')[0]

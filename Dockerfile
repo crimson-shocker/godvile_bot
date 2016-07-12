@@ -8,4 +8,5 @@ EXPOSE 5901
 RUN locale-gen ru_RU.UTF-8 
 ADD godville.py /opt/godville.py
 ADD locale /etc/default/locale
+ADD passwd /opt/passwd
 RUN pip3 install selenium  &&  chmod +x /opt/godville.py
