@@ -22,7 +22,7 @@ passwd = r.split(':')[1]
 f.close()
 #/---passwd_file---
 
-browser = webdriver.Chrome()
+browser = webdriver.Firefox()
 browser.get('https://godville.net')
 
 #---login---
