@@ -40,8 +40,12 @@ try:
     )
 except:
 	pass
-
 #---script_body---
+
+#--lists--
+word = ['кирпич']
+#/--lists--
+
 #--stats--
 class statistics:
 	def hp(self):
@@ -84,8 +88,17 @@ class prod_voice:
 		browser.find_element_by_id('voice_submit').click()
 
 	def stone(self):
-		browser.find_element_by_xpath("//a[contains(text(),'Сделать хорошо')]").click()
-		time.sleep(1)
+		while True:
+			if st.prana() > 25:
+				browser.find_element_by_xpath("//a[contains(text(),'Сделать хорошо')]").click()
+				time.sleep(3)
+			else:
+				break
+
+			if word[0] in browser.find_element_by_css_selector('div.d_msg').text:
+				break
+			
+
 		
 
 voice = prod_voice()
