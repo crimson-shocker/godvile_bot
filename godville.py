@@ -65,11 +65,13 @@ class statistics:
 
 	def gold(self):
 		hero_gold = browser.find_element_by_css_selector('#hk_gold_we > div.l_val').text
-		return int((hero_gold.split(" ")[1]))
+		try:
+			return int((hero_gold.split(" ")[1]))
+		except:
+			return 0
 
 	def if_hero_with_mob(self):
 		while mob() == prot:
-			print("Stil wait...")
 			time.sleep(2)
 
 st = statistics() #statistic object
@@ -155,6 +157,9 @@ ar = arena() #arena object
 #/--arena--
 #--AI--
 def main():
+	if st.hp() == 0: #resurection
+		browser.find_element_by_xpath("//a[contains(text(),'Воскресить')]").click()
+
 	if st.mob() != prot and st.gold() > 9000:
 		voice.stone()
 		time.sleep(1)
