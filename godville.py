@@ -170,6 +170,11 @@ ar = arena() #arena object
 #/--arena--
 #--AI--
 def main():
+	try:
+		browser.find_element_by_xpath("//a[contains(text(),'@')]").click()
+	except:
+		pass
+
 	if st.hp() == 0: #resurection
 		browser.find_element_by_xpath("//a[contains(text(),'Воскресить')]").click()
 
