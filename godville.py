@@ -170,13 +170,13 @@ ar = arena() #arena object
 #/--arena--
 #--AI--
 def main():
+	if st.hp() == 0: #resurection
+		browser.find_element_by_xpath("//a[contains(text(),'Воскресить')]").click()
+
 	try:
 		browser.find_element_by_xpath("//a[contains(text(),'@')]").click()
 	except:
 		pass
-
-	if st.hp() == 0: #resurection
-		browser.find_element_by_xpath("//a[contains(text(),'Воскресить')]").click()
 
 	if st.mob() != prot and st.gold() > 9000:
 		voice.stone()
