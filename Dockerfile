@@ -3,6 +3,7 @@
 FROM consol/ubuntu-xfce-vnc
 
 RUN apt-get update && \apt-get install -y python3-pip
+RUN apt-get install -y language-pack-en
 
 EXPOSE 5901
 RUN locale-gen ru_RU.UTF-8 
